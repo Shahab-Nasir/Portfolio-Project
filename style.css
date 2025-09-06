@@ -1,0 +1,318 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+  font-size: 65%;
+}
+body, html {
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  line-height: 1.4;
+  scroll-behavior: smooth;
+  color: white;
+}
+
+/* Navbar CSS  */
+
+.header h1 {
+    font-size: 32px;
+    font-weight: 800;
+}
+.container {
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem;
+}
+.header {
+    background-color: #0089b7;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+ul a {
+    text-decoration: none;
+    color: white;
+}
+ul {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+    font-size: 28px;
+    font-weight: 500;
+}
+ul li {
+    border-bottom: 0.4rem transparent solid;
+    transition: 0.2s ease-in-out;
+
+}
+
+ul li:hover {
+    border-bottom: 0.4rem #fff700 solid;
+    transition: 0.3s ease-in-out;
+}
+
+/* Hero Section CSS */
+
+#hero {
+    background-color: #003d62;
+    padding: 2rem 0;
+    border-bottom: 10px solid #0089b7;
+}
+
+#hero .container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.hero-text {
+  font-size: 2rem;
+  display: grid;
+  place-items: center;
+}
+.Hi {
+    color: #fff700;
+    font-size: 60px;
+    font-weight: 700;
+}
+.name {
+    font-size: 50px;
+    font-weight: 600;
+}
+.hero-text h2{
+    font-size: 48px;
+    font-weight: bold;
+    margin-top: 0 auto ;
+    overflow: hidden;
+    border-right: 0.15em solid orange;
+    white-space: nowrap;
+    animation: typing 3s steps(40, end), blink-caret 0.75s step-end infinite;
+}
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: orange;
+  }
+}
+
+.hero-text {
+    display: grid;
+    place-items: center;
+}
+
+
+/* Project Section */
+
+#projects {
+  background-color: #003251;
+  padding: 20px 0px 100px 0px;
+  border-bottom: 10px solid #0089b7;
+}
+
+#projects h2 {
+  text-align: center;
+  font-size: 6rem;
+  font-weight: bold;
+  padding: 4rem 0;
+}
+
+.project_container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+}
+
+.griditems {
+  display: grid;
+  place-items: center;
+}
+
+.card {
+  width: 320px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  transition: 0.3s ease-in-out;
+}
+
+.card:hover {
+  transform: scale(1.10);
+  transition: 1s ease-in-out;
+}
+
+.card:hover img {
+  transform: scale(1);
+  transition: 0.2s ease-in-out;
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+.cardcontent {
+  text-align: center;
+  position: relative;
+  padding: 1.5rem;
+  top: -6rem;
+  margin-bottom: -6rem;
+  transition: 0.5s ease-in-out;
+  transform: translateY(100px);
+}
+
+.card:hover .cardcontent {
+  background-color: white;
+  color: #003d62;
+  transform: translateY(0px);
+  cursor: pointer;
+}
+
+/* Contact Me */
+
+#contactme {
+  background-color: #003d62;
+  border-bottom: 10px solid #0089b7;
+
+}
+
+#contactme h2 {
+  padding-top: 80px;
+  text-align: center;
+  font-size: 6rem;
+  font-weight: bold;
+}
+
+#contactme .container {
+  min-height: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 4rem;
+}
+
+.top_contact {
+  max-width: 800px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+  margin: 0 auto;
+  gap: 4rem;
+}
+
+.contact_way {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+#contactme i {
+  font-size: 2rem;
+}
+#contactme h3 {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.bottom_contact {
+  max-width: 400px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+  margin: 0 auto;
+  gap: 4rem;
+}
+
+/* Rights Section */
+.rights {
+  height: 120px;
+  background-color: #003251;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 32px;
+  font-weight: 400;
+  margin: auto;
+}
+
+@media (max-width: 780px) {
+  html {
+    font-size: 40%;
+  }
+  #hero .container {
+    flex-direction: column;
+  }
+  #hero .container img{
+    display: grid;
+    place-items: center;
+  }
+
+    .header h1{
+    font-size: 32px;
+  }
+  ul {
+    font-size: 24px;
+  }
+  .hero-text {
+    font-size: 2rem;
+  }
+  .Hi {
+    font-size: 32px;
+  }
+  .name{
+    font-size: 32px;
+  }
+  .hero-text h2{
+    font-size: 32px;
+  }
+  #contactme .container{
+    min-height: 20vh;
+  }
+  #contactme h2 {
+    padding-top: 40px;
+}
+.rights {
+  font-size: 18px;
+  height: 80px;
+}
+}
+
+@media (max-width: 500px){
+  html {
+    font-size: 32%;
+  }
+    #hero .container {
+    flex-direction: column;
+  }
+  #hero .container img{
+    display: grid;
+    place-items: center;
+  }
+
+  .header h1{
+    font-size: 25px;
+  }
+  ul {
+    font-size: 16px;
+  }
+  nav {
+    justify-content: space-around;
+  }
+}
